@@ -1,5 +1,8 @@
 #=====================================Array Lesson ===================
 # ===>1
+from abc import abstractproperty
+
+
 array = [1,2,3,4]
 for value in array:
     print(value,end=" ")
@@ -185,6 +188,25 @@ print(array)
 
 
 #===>28
+list1 = eval(input())
+list2 = eval(input())
+if len(list1) == len(list2):
+    message = "EQUAL"
+    for i in range(len(list1)):
+        if list1[i] != list2[i]:
+            message = "NOT EQUAL"
+else:
+    message = "NOT EUQAL"
+print(message)
+
+
+#===>29
+array = eval(input())
+for i in range(len(array)):
+    if array[i] < 10:
+        array[i] = 10
+print(array)
+
 #=====================================Function Lesson ================
 #===>1
 def add10(array):
@@ -413,3 +435,250 @@ print(reverseString(text1))
 
 
 #===>22
+def countSeven(array):
+    totalSeven  = 0
+    for element in range(len(array)):
+        if array[element] == 7:
+            totalSeven += 1
+    return totalSeven
+array = eval(input("Enter Number You Want And Contend 7 To See The Result: "))
+print("In this array there are : " + str(countSeven(array)) + " time.")
+
+
+#===>23
+def countSmallToBig(arrayOfNumbers):
+    totalOfSmallToBig = 0
+    for i in range(1,len(arrayOfNumbers)):
+        if arrayOfNumbers[i] > arrayOfNumbers[i-1]:
+            totalOfSmallToBig += 1
+    return totalOfSmallToBig
+arrayOfNumbers = eval(input("Enter Nums: "))
+print(countSmallToBig(arrayOfNumbers))
+
+
+#===>24
+def countAInArray(words):
+    countA = 0
+    for value in words:
+        for element in range(len(value)):
+            if value[element] == "A" or value[element] == "a":
+                countA += 1
+    return countA
+words = eval(input("Enter Word In Words: "))
+print(countAInArray(words))
+
+
+#===>25
+def numberOfEight(array):
+    countNumber8 = 0
+    for value in array:
+        if value == 8:
+            countNumber8 += 1
+    return countNumber8
+array = eval(input("Enter Number: "))
+countNumber8 = numberOfEight(array)
+if countNumber8 > 0:
+    result = countNumber8
+else:
+    result = "NOT FOUND"
+print(result)
+
+
+#===>26
+def sumArray(array):
+    result = 0
+    for i in range(len(array)):
+        result += array[i]
+    return result 
+array1 = eval(input("Enter num: "))
+array2 = eval(input("Enter num: "))
+print(sumArray(array1))
+print(sumArray(array2))
+
+
+#===>27
+def findValue(array,index):
+    result = array[index]
+    return result
+array = eval(input("Enter value: "))
+# array = ["ra","ry"]
+index = int(input("Enter Index: "))
+print(findValue(array,index))
+
+#==No function==
+stringOfArray = eval(input("Enter Here: "))
+index = int(input("My Index: "))
+print(stringOfArray[index])
+
+
+#===>28
+def countEven(array):
+    numberOfEven = 0
+    for value in array:
+        if value % 2 == 0:
+            numberOfEven += 1
+    return numberOfEven 
+def countOdd(array):
+    numberOfOdd = 0
+    for value in array:
+        if value % 2 == 1:
+            numberOfOdd += 1
+    return numberOfOdd
+array = eval(input("Enter Number: "))
+print(countEven(array))
+print(countOdd(array))
+
+
+#===>29
+def storeEven(array):
+    arrayEven = []
+    for value in array:
+        if value % 2 == 0:
+            arrayEven.append(value)
+    return arrayEven
+def storeOdd(array):
+    arrayOdd = []
+    for value in array:
+        if value % 2 == 1:
+            arrayOdd.append(value)
+    return arrayOdd
+array = eval(input("Enter Number: "))
+print(storeEven(array))
+print(storeOdd(array))
+
+
+#===>30
+def ExchangeDollarToKhmer (number):
+    resultExchange = number * 4000
+    return resultExchange
+number = int(input("Enter Number:"))
+AfteExchange = ExchangeDollarToKhmer(number)
+print(AfteExchange)
+
+
+#===>31
+def rectangleOfX(number):
+        rectangle = ""
+        for h in range(number):
+                for w in range(number):
+                        rectangle += "X"
+                rectangle += "\n"
+        return rectangle
+number = int(input("Enter Number: "))
+print(rectangleOfX(number))
+    
+
+#===>32
+def countLetterX(string):
+        amountX = 0
+        for i in range(len(string)):
+                if string[i] == "X":
+                        amountX += 1
+        return amountX 
+string = input("Enter String Mk: ")
+print(countLetterX(string))
+
+
+#===>33
+def removeMinuses(word):
+    newWord=""
+    for i in range(len(word)):
+        if word[i]!="-":
+            newWord+=word[i]
+    return newWord
+yes=True
+while yes:
+    word=input("Enter Your String:")
+    # r-o-n-a-n
+    # Y we can enter more,it N we cannot enter anymore
+    print(removeMinuses(word))
+    restartAgain=input()
+    if restartAgain=="N":
+        yes=False
+
+    
+#===>34
+def sum(value1,value2):
+        return value1 + value2
+value1 = 0 # value1 jam tro number and when we enter number2 jol so value1 gain those value and wait more value 2 enter
+number = int(input("Enter Amount Of Enter: "))
+for i in range(number):
+        value2 = int(input("Value"+str(i+1)+": " )) 
+        value1 = sum(value1,value2)
+print(value1)
+
+
+#===>35
+def factorial(n):
+    if n == 0:
+        return 1   # factoral mean that * decrese. Ex 4 => 4X3X2X1 = 24
+    else:
+        return n * factorial(n-1)  # first it calulate n-1 until n == 0 that time it will return number1 mk.
+n=int(input("Input a number to compute the factiorial : "))
+print(factorial(n))
+
+
+#===>36
+def countChar(word,char):
+        timeChar = 0
+        for value in word:
+                for i in range(len(value)):
+                        if value[i] == char:
+                                timeChar += 1
+        return timeChar
+word = eval(input("Enter array with store letter: "))
+['a','b','c']
+char = input("Enter char: ")
+# a result is 1
+print(countChar(word,char))
+
+
+
+#===>37
+def sum(number1,number2):
+    resultOfSum = number1 + number2
+    return resultOfSum
+number1 = int(input("Take Value To parametter number1: "))
+number2 = int(input("Take Value To parameter number2: "))
+print("The sum is: " + str(sum(number1,number2)))
+
+
+#===>38
+def sum(totalOfV):
+    count = 0
+    for i in range(NumberOfValue):
+        count += 1
+        number = int(input("value "+ str(count) + ": "))
+        totalOfV += number
+    return totalOfV
+totalOfV = 0
+NumberOfValue = int(input("Number of value: "))
+print("The sum is: "+str(sum(totalOfV)))
+
+
+
+#===>39
+def remove_duplicates(array):
+    result=[]
+    for i in array:
+        if i not in result:
+            result.append(i)
+    return result
+array=eval(input())
+print(remove_duplicates(array))
+
+
+#===>40
+def replaceOne(array):
+    firstChange = True
+    for i in range(len(array)):
+        if array[i] == 1  and firstChange: 
+            array[i] = 0
+        else:
+            firstChange = False
+    return array
+array = eval(input())
+print(replaceOne(array))
+
+
+#===>41
