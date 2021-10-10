@@ -207,6 +207,33 @@ for i in range(len(array)):
         array[i] = 10
 print(array)
 
+#===>30
+numbers=[[1,2,3],[4,5,6],[7,8,9]]
+print(numbers[1][1])
+
+# one more way
+# column is index of element in main array.
+numbers=[
+    [1,2,3],  #0 row is index of main array 
+    [4,5,6],  
+    [7,8,9]
+]
+print(numbers[1][1]) #numbers([row][column])
+
+#===>31
+a = [[1,7,3,4], [5,6,7,8],[9,1,1,1]]
+result = ""
+for element in a[0]:
+    result += str(element) + "-"
+print(result)
+
+
+#===>32
+a = [[1,7,3,4],[5,6,7,8],[9,1,1,1]]
+result = ""
+for value in range(len(a)):
+    result += str(a[value][-1]) + "-"
+print(result)
 #=====================================Function Lesson ================
 #===>1
 def add10(array):
