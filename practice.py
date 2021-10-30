@@ -709,3 +709,92 @@ print(replaceOne(array))
 
 
 #===>41
+# ==========================DictionaryArray===============
+#===>Ex1
+
+a = {"cambodia":17,"thailand":20}
+print(a["cambodia"])
+
+# ===>Ex2
+
+studentsAge = {}
+studentsAge['sokan'] = 25  #addban mdong mouy
+studentsAge['seiha'] = 20
+print(studentsAge)
+
+# ===>Ex3
+studentsAge = {}
+studentsAge['sokan'] = 25
+studentsAge['khom'] = 20
+studentsAge.pop('sokan')
+print(studentsAge)
+
+
+# ===>Ex4
+students = {}
+students["2021A"] = 20
+students["2021B"] = 30
+students["2021C"] = 15
+for key in students:
+    result = "Class " + str(key) + " has " + str(students[key]) + " students."
+    print(result)
+
+# ===>Ex5
+students = {}
+studentClass = input("Enter class: ")
+numberOfStudent = int(input("Enter Number: "))
+students["2021A"] = 20
+students["2021B"] = 30
+students["2021C"] = 15
+for key in students:
+    if key == studentClass:
+        students[key] += numberOfStudent
+    result = "Class " + str(key) + " has " + str(students[key]) + " students."
+    print(result)
+
+# ===>Ex6
+firstClass = {"2021A":20,"2021B":30,"2021C":15}
+secondClass = {"2021A":15,"2021C":10,"2021D":99}
+for key in firstClass:
+    if key in secondClass:
+        secondClass[key] += firstClass[key]
+firstClass.update(secondClass)
+print(firstClass)
+
+
+# =====================Halloween Cup==========
+# ======Number One==========
+life = 2
+# ke oy srap
+index = 0
+letterOnRoad = input()
+for letter in range(1,len(letterOnRoad)):
+    # the first letter is H and ke ot think on H. It is the reason that we start from 1
+    if letterOnRoad[letter] == "P":
+        life += 1
+        index += 1
+    elif letterOnRoad[letter] == "V" and life > 0:
+        life -= 1
+        index += 1
+    elif letterOnRoad[letter] == "O" and life > 0:
+        index += 1
+print(index)
+
+# ==========Number Two==========
+number = int(input())
+for i in range(1,number + 1):
+    print(" "*(number-i) + "* "*i)
+
+# One more way
+n = int(input("Enter the number of rows: "))
+m = (2*n)-2
+for i in range(0,n):
+    for j in range(0,m):
+        print(end=" ")
+    m = m-1 #decrement m after each loop
+    for j in range(0,i+1):
+        print("*",end=" ")
+    print(" ")
+
+
+# =========Number Three=========
