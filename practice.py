@@ -798,3 +798,21 @@ for i in range(0,n):
 
 
 # =========Number Three=========
+def compare(list1,list2):
+    if len(list1) == len(list2):
+        isEqual = True
+        for num in range(len(list1)):
+            if list1[num] != list2[num]:
+                isEqual = False
+    else:
+        isEqual = False
+    return isEqual
+list1 = eval(input())
+list2 = eval(input())
+list3 = eval(input())
+if compare(list1,list2) and compare(list1,list3):
+    message = "Equal"
+else:
+    message = "Not Equal"
+print(message)
+    
